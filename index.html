@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDV-LAYOUT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+  <div class="pdv-container" style="display: flex; height: 100vh; background-color: #ECF4F9;">
+
+    <div id="card-left" class="card card-body" style="flex: 40%; background-color: whitesmoke; margin: 4vh 1vh 6vh 8vh ">
+      <div class="card-header" style="flex-direction: row; display: flex; justify-content: space-around; height: 18vh;">
+        <section style="flex: 60%; display: flex" >
+          <img src="./ATX_Networks_Logo.png" alt="" style="width: 20vh;">
+        </section>  
+        <section style="display: flex; align-items: center; flex-direction: column; flex: 40%;">
+          <img src="./ATX_Networks_Logo.png" alt="" style="width: 10vh;">
+          <p style="text-align: center; line-height: 1; margin-top: 3vh;"><strong>&copy;ATX TECNOLOGIA<br>contato@atxsolucoes.com.br<br>(92) 3646-3035</strong></p>
+        </section>
+      </div>
+
+      <div style="flex-direction: row; display: flex; margin-top: 2vh;">
+        <section style="flex: 10%; margin: 1vh;">
+          <button type="button" class="btn btn-success" style="height: 10vh; line-height: 1;">F2 Pesquisar produto</button>
+        </section>
+        <section style=" flex: 90%; display: flex;  margin: 1vh;">
+          <input type="text" style="width: 100%; text-align: start;" placeholder="Código">          
+        </section>
+      </div>
+
+      <div class="infos-product" style="display: flex; align-items: center; flex-direction: row;">
+        <section style="flex: 20%;">
+          <img src="./picanha.png" alt="" style="width: 35vh;">
+        </section>
+        <section style="flex: 80%;">
+          <input type="text" style="width: 100%; height: 10vh; margin-bottom: 2vh; margin-top: 2vh;" placeholder="Quantidade" disabled="true">
+          <input type="text" style="width: 100%; height: 10vh; margin-bottom: 2vh;" placeholder="Valor" disabled="true">
+          <input type="text" style="width: 100%; height: 10vh; margin-bottom: 2vh;" placeholder="Total" disabled="true">
+        </section>
+      </div>
+
+      <div class="card-footer" style="position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: space-around; ">
+        <span><h1>Atalhos</h1></span>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="card-right" class="card card-body" style="flex: 60%; background-color: #F8F3E5; margin: 15vh 10vh 6vh 5vh;">
+      <div>
+        <span id="hora" style="position: absolute; top: 0; right: 0;"></span>
+      </div>            <!-- Conteúdo do lado direito (60%) -->
+      <div class="card-header" style="border-bottom: solid black;">
+
+      </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+    <script>
+      // Função para obter e exibir a hora atual
+      function mostrarHora() {
+          var agora = new Date();
+          var horas = agora.getHours();
+          var minutos = agora.getMinutes();
+          var segundos = agora.getSeconds();
+
+          // Formata a hora para adicionar zeros à esquerda, se necessário
+          horas = horas < 10 ? '0' + horas : horas;
+          minutos = minutos < 10 ? '0' + minutos : minutos;
+          segundos = segundos < 10 ? '0' + segundos : segundos;
+
+          var horaAtual = horas + ':' + minutos + ':' + segundos;
+
+          // Atualiza o conteúdo da span com o ID "hora"
+          document.getElementById('hora').textContent = horaAtual;
+      }
+
+      // Chama a função inicialmente para exibir a hora quando a página carregar
+      mostrarHora();
+
+      // Define um intervalo para atualizar a hora a cada segundo (1000 milissegundos)
+      setInterval(mostrarHora, 1000);
+  </script>
+
+</body>
+
+</html>
