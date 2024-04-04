@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDV-LAYOUT</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="pdv-container">
+    <!-- Card Left -->
+    <div id="card-left" class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="./LOGO_ATX_SALES_Tecnologia_1.png" alt="ATX Sales Logo" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <img src="./LOGO_KANOA.png" alt="Kanoa Logo" class="img-fluid">
+            <p><strong>&copy;ATX TECNOLOGIA<br>contato@atxsolucoes.com.br<br>(92) 3646-3035</strong></p>
+          </div>
+        </div>
+
+        <div class="search-input">
+          <button type="button" class="btn btn-success">F2 Pesquisar produto</button>
+          <input type="text" class="form-control" placeholder="Código">
+        </div>
+
+        <div class="infos-product">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./picanha.png" alt="Product Image" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+              <input type="text" class="form-control" placeholder="Quantidade">
+              <input type="text" class="form-control" placeholder="Valor" disabled>
+              <input type="text" class="form-control" placeholder="Total" disabled>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <p><strong>Del - Excluir</strong></p>
+          <p><strong>F3 - Editar</strong></p>
+          <p><strong>F4 - Guardar</strong></p>
+          <p><strong>F5 - Atualizar</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hora Atual -->
+    <span id="hora"></span>
+
+    <!-- Card Right -->
+    <div id="card-right" class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Código</p>
+          </div>
+          <div class="col-md-6">
+            <p>Produto</p>
+          </div>
+        </div>
+        <div class="card-header"></div>
+        <div class="card-body"></div>
+        <div class="footer">
+          <div class="row">
+            <div class="col-md-6">
+              <p><strong>Itens</strong></p>
+            </div>
+            <div class="col-md-6">
+              <p><strong>Total da Venda</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts do Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para exibir a hora -->
+  <script>
+    function mostrarHora() {
+      var agora = new Date();
+      var horas = agora.getHours();
+      var minutos = agora.getMinutes();
+      var segundos = agora.getSeconds();
+
+      horas = horas < 10 ? '0' + horas : horas;
+      minutos = minutos < 10 ? '0' + minutos : minutos;
+      segundos = segundos < 10 ? '0' + segundos : segundos;
+
+      var horaAtual = horas + ':' + minutos + ':' + segundos;
+
+      document.getElementById('hora').textContent = horaAtual;
+    }
+
+    mostrarHora();
+    setInterval(mostrarHora, 1000);
+  </script>
+
+  <style>
+    .pdv-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ECF4F9;
+    padding: 20px;
+  }
+  
+  #card-left,
+  #card-right {
+    max-width: 100%;
+  }
+  
+  .search-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .infos-product {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .card-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    border-radius: 17px 0;
+  }
+  
+  .footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    border-radius: 17px 0;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .card-body {
+      padding: 10px;
+    }
+  }
+  
+  </style>
+
+</body>
+
+</html>

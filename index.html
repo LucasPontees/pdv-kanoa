@@ -16,93 +16,74 @@
 
 <body>
 
-  <div class="pdv-container" style="display: flex; height: 100vh; background-color: #ECF4F9;">
+  <div class="pdv-container">
 
-    <div id="card-left" class="card card-body" style="flex: 40%; background-color: #ECF4F9; margin: 4vh 1vh 6vh 8vh; border-radius: 17px 0;">
-      <div class="card-header" style="flex-direction: row; display: flex;  height: 22vh; border: none; background-color: #ECF4F9; ">
-        <section style="flex: 60%; display: flex" >
-          <img src="./LOGO ATX SALES_Tocnologia 1.png" alt="" style="width: 35vh;">
-        </section>  
-        <section style="display: flex; align-items: center; flex-direction: column; flex: 40%; ">
-          <img src="./LOGO KANOA.png" alt="" style="width: 20vh;">
-          <p style="text-align: center; line-height: 1.3; margin-top: 3vh; color: #1E1E1E; font-size: 2vh;"><strong>&copy;ATX TECNOLOGIA<br>contato@atxsolucoes.com.br<br>(92) 3646-3035</strong></p>
+    <div class="first-card card">
+
+      <div class="first-card-header card-header">
+        <img class="company-logo" src="./LOGO ATX SALES_Tocnologia 1.png" alt="company logo">
+        <section class="company-info">
+          <img src="./LOGO KANOA.png" alt="company-info" style="width: 20vh;">
+          <p class="info-company"><strong>&copy;ATX TECNOLOGIA<br>contato@atxsolucoes.com.br<br>(92) 3646-3035</strong>
+          </p>
         </section>
       </div>
 
+      <div class="card card-body" style="background-color: #ECF4F9; border: none;">
 
-      <div style="flex-direction: row; display: flex; margin-top: 2vh; align-items: center;">
-        <section style="flex: 10%; margin: 1vh;">
-          <button type="button" class="btn btn-success" style="height: 8.5vh; line-height: 0.8;">F2 Pesquisar produto</button>
-        </section>
-        <section style=" flex: 90%; display: flex;  margin: 0vh;">
-          <input type="text" style="width: 100%; text-align: start; border: none; border-radius: 17px 0px; height: 8.5vh;" placeholder="Código">          
-        </section>
+        <div class="search-product">
+          <button type="button" class="button-search btn btn-success">F2 Pesquisar produto</button>
+          <input type="text" class="search-code" placeholder="Código">
+        </div>
+
+        <div class="info-product">
+          <img class="image-product" src="./picanha.png" alt="image-product">
+          <section style="height: 30vh;">
+            <input class="input-info" type="text" placeholder="Quantidade">
+            <input class="input-info" type="text" placeholder="Valor" disabled="true">
+            <input class="input-info" type="text" placeholder="Total" disabled="true">
+          </section>
+        </div>
+
       </div>
 
-      <div class="infos-product" style="display: flex; align-items: center; flex-direction: row; margin-top: 2vh; ">
-        <section style="flex: 20%; border-radius: 17px 0px; background-color: #FFFFFF; margin-left: 1vh; margin-right: 2vh; height: 30vh;">
-          <img src="./picanha.png" alt="" style="width: 30vh;">
-        </section>
-        <section style="flex: 80%; height: 30vh;">
-          <input type="text" style="width: 100%; height: 8.5vh; margin-bottom: 1vh;  border: none; background-color: #FFFFFF; border-radius: 17px 0px;" placeholder="Quantidade" >
-          <input type="text" style="width: 100%; height: 8.5vh; margin-bottom: 1vh; margin-top: 1vh; border: none; background-color: #FFFFFF; border-radius: 17px 0px;" placeholder="Valor" disabled="true">
-          <input type="text" style="width: 100%; height: 8.5vh; margin-bottom: 2vh; margin-top: 1vh; border: none; background-color: #FFFFFF; border-radius: 17px 0px;" placeholder="Total" disabled="true">
-        </section>
-      </div>
-
-      <div class="card-footer" style="position: relative; margin-top: 8vh; left: 0; right: 0; display: flex; justify-content: space-around; background-color: #FFFFFF; border-radius: 17px 0;">
-       <p style="font-size: 2vh;"><strong>Del - Excluir</strong></p>
-       <p style="font-size: 2vh;"><strong>F3 - Editar</strong></p>
-       <p style="font-size: 2vh;"><strong>F4 - Guardar</strong></p>
-       <p style="font-size: 2vh;"><strong>F5 - Atualizar</strong></p>
+      <div class="card-footer">
+        <p class="shortcut"><strong>Del - Excluir</strong></p>
+        <p class="shortcut"><strong>F3 - Editar</strong></p>
+        <p class="shortcut"><strong>F4 - Guardar</strong></p>
+        <p class="shortcut"><strong>F5 - Atualizar</strong></p>
       </div>
 
     </div>
 
+    <div class="second-card card">
 
-    <span id="hora" style="position: absolute; top: 0; right: 0;"></span>
-
-
-    <div id="card-right" class="card card-body" style="flex: 60%; background-color: #F8F3E5; margin: 15vh 10vh 6vh 5vh;">
-      <div  style="display: flex; flex-direction: row; justify-content: space-between; height: 3vh;">
-      <section style="display: flex; flex-direction: row; ">
+      <span id="hora" style="background-color: #ECF4F9;"></span>
+      <div class="title-card card card-header">
+        <div style="display: flex; flex-direction: row; ">
           <p>Código</p>
           <p style="margin-left: 10vh;">Produto</p>
-        </section>
+        </div>
         <section style="display: flex; flex-direction: row; ">
-          <p style="margin-right: 6vh;">Unid.Venda</p>
-          <p style="margin-right: 6vh;">Valor Venda</p>
-          <p style="margin-right: 6vh;">Qtde</p>
-          <p style="margin-right: 1vh">Total</p>
+          <p class="title-card-info">Unid.Venda</p>
+          <p class="title-card-info">Valor Venda</p>
+          <p class="title-card-info">Qtde</p>
+          <p>Total</p>
         </section>
       </div>
-      <div class="card-header" style="border-bottom: solid black;">
-      </div>
-      <div class="card-body"></div>
-      <div class="footer" style="position: relative; display: flex; justify-content: space-around; padding-bottom: 1vh; height: 8.5vh;">
 
-        <section style="flex: 40%;  background-color: #FFFFFF; border: solid #F8F3E5;">
-          <div style="display: flex; justify-content: start;  margin-right: 5vh;">
-            <p>
-              <strong>Itens</strong>
-            </p>
-          </div>
-        </section>
-
-        <section style="flex: 60%; background-color: #FFFFFF; border: solid #F8F3E5;">
-          <div style="display: flex; justify-content: start; margin-right: 5vh;">
-            <p>
-              <strong>Total da Venda</strong>
-            </p>
-          </div>
-        </section>
-
+      <div class="empty-kart card card-body">
+        <img src="/empty-kart.png" alt="empty-kart" height="60%">
       </div>
-        
+
+      <div class="footer">
       </div>
+
     </div>
+
   </div>
-  
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -117,32 +98,162 @@
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
 
-    <script>
-      // Função para obter e exibir a hora atual
-      function mostrarHora() {
-          var agora = new Date();
-          var horas = agora.getHours();
-          var minutos = agora.getMinutes();
-          var segundos = agora.getSeconds();
+  <script>
+    // Função para obter e exibir a hora atual
+    function mostrarHora() {
+      var agora = new Date();
+      var horas = agora.getHours();
+      var minutos = agora.getMinutes();
+      var segundos = agora.getSeconds();
 
-          // Formata a hora para adicionar zeros à esquerda, se necessário
-          horas = horas < 10 ? '0' + horas : horas;
-          minutos = minutos < 10 ? '0' + minutos : minutos;
-          segundos = segundos < 10 ? '0' + segundos : segundos;
+      // Formata a hora para adicionar zeros à esquerda, se necessário
+      horas = horas < 10 ? '0' + horas : horas;
+      minutos = minutos < 10 ? '0' + minutos : minutos;
+      segundos = segundos < 10 ? '0' + segundos : segundos;
 
-          var horaAtual = horas + ':' + minutos + ':' + segundos;
+      var horaAtual = horas + ':' + minutos + ':' + segundos;
 
-          // Atualiza o conteúdo da span com o ID "hora"
-          document.getElementById('hora').textContent = horaAtual;
-      }
+      // Atualiza o conteúdo da span com o ID "hora"
+      document.getElementById('hora').textContent = horaAtual;
+    }
 
-      // Chama a função inicialmente para exibir a hora quando a página carregar
-      mostrarHora();
+    // Chama a função inicialmente para exibir a hora quando a página carregar
+    mostrarHora();
 
-      // Define um intervalo para atualizar a hora a cada segundo (1000 milissegundos)
-      setInterval(mostrarHora, 1000);
+    // Define um intervalo para atualizar a hora a cada segundo (1000 milissegundos)
+    setInterval(mostrarHora, 1000);
   </script>
 
+  <style>
+    .pdv-container {
+      display: flex;
+      height: 100vh;
+      background-color: #ECF4F9;
+    }
+
+    .first-card {
+      flex: 40%;
+      background-color: #ECF4F9;
+      margin: 4vh 1vh 6vh 8vh;
+      border-radius: 17px 0;
+    }
+
+    .first-card-header {
+      flex-direction: row;
+      display: flex;
+      height: 22vh;
+      border: none;
+      background-color: #ECF4F9;
+    }
+
+    .company-logo {
+      width: 35vh;
+      flex: 60%;
+      display: flex
+    }
+
+    .company-info {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex: 40%;
+    }
+
+    .info-company {
+      text-align: center;
+      line-height: 1.3;
+      margin-top: 3vh;
+      color: #1E1E1E;
+      font-size: 2vh;
+    }
+
+    .search-product {
+      flex-direction: row;
+      display: flex;
+      margin-top: 2vh;
+      align-items: center;
+    }
+
+    .button-search {
+      line-height: 0.8;
+      flex: 10%;
+      margin: 1.8vh;
+    }
+
+    .search-code {
+      width: 100%;
+      text-align: start;
+      border: none;
+      border-radius: 17px 0px;
+      height: 8.5vh;
+      flex: 90%;
+      display: flex;
+      ;
+    }
+
+    .info-product {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 2vh;
+    }
+
+    .image-product {
+      width: 30vh;
+      border-radius: 17px 0px;
+      background-color: #FFFFFF;
+      margin-left: 1vh;
+      margin-right: 2vh;
+      height: 30vh;
+    }
+
+    .input-info {
+      width: 100%;
+      height: 8.5vh;
+      margin-bottom: 1vh;
+      border: none;
+      background-color: #FFFFFF;
+      border-radius: 17px 0px;
+    }
+
+    .card-footer {
+      position: relative;
+      margin-top: 8vh;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-around;
+      background-color: #FFFFFF;
+      border-radius: 17px 0;
+    }
+
+    .shortcut {
+      font-size: 2vh;
+    }
+
+    .second-card {
+      flex: 60%;
+      background-color: #F8F3E5;
+      margin: 15vh 10vh 6vh 5vh;
+    }
+
+    .title-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border: none;
+      border-bottom: solid black;
+    }
+
+    .title-card-info {
+      margin-right: 6vh;
+    }
+
+    .empty-kart {
+      background-color: #F8F3E5;
+      border-top: none;
+    }
+  </style>
 </body>
 
 </html>
